@@ -3,47 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dallellama</title>
+    <title>dallellama</title>
     <style>
+        @font-face { font-family: Cedarville Cursive; src: url('CedarvilleCursive-Regular.TTF'); }
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            align-items: center;
             min-height: 100vh;
         }
 
         h1 {
-            font-size: 2em;
-            color: #333;
+            font-size: 3em;
+            color: #4a4a4a;
+            margin-top: 20px;
         }
 
         h2 {
-            font-size: 1.5em;
-            color: #666;
+            font-size: 2em;
+            color: #6a6a6a;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        footer {
+            font-size: 0.9em;
+            color: #999;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .featured-text {
+            font-family: "Cedarville Cursive", Arial, sans-serif;
+            font-size: 2em;
+            color: #4a4a4a;
+            margin: 20px auto;
+            padding: 20px;
+            width: 70%;
+            background-color: #f0f0f0;
+            border: 2px solid #6a6a6a;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-frame {
+            width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            margin: 0 auto;
+            border-radius: 8px;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            flex-grow: 1;  /* Ensures that footer stays at the bottom */
-        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
 
-        footer {
-            font-size: 0.8em;
-            color: #999;
-            background-color: lightgray;
-            padding: 10px;
-            text-align: center;
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .container, .photo-frame, .featured-text {
+                width: 95%;
+            }
+
+            .photo-frame {
+                width: 95%;
+            }
+
+            .featured-text {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -51,7 +101,13 @@
     <div class="container">
         <h1>dallellama</h1>
         <h2>your useless genai guru</h2>
-        <img src="llama.png" alt="Dallellama Image">
+        <div class="photo-frame">
+            <img src="llama.png" alt="Dallellama Image">
+        </div>
+        <div class="featured-text">
+            <p>12-29-23</p>
+            <p>"In the dance of the cosmos, your true purpose whispers in the language of wandering stars and giggling winds."</p>
+        </div>
     </div>
     <footer>&copy; Adam Bailey. All rights reserved.</footer>
 </body>
